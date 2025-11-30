@@ -24,6 +24,7 @@ Este portafolio es una landing page sencilla donde muestro algunos proyectos ini
 
 ## Despliegue 🌍
 Publicado en **GitHub Pages** 
+[Mi portafolio](https://jassalvador.github.io/portafolio/)
 
 ## Licencia 📃
 Este proyecto está bajo la licencia MIT.
