@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-primary: #93cacc;       
+    --color-bg-secondary: #F4F4F4;
+    --color-accent: #22727c;         
+    --color-shadow: #a0a6a8;         
+    --color-text: #1e1e1e;          
+    --color-text-inverted: #ffffff;
+}
+
+/* ------------ESTILOS GENERALES------------- */
+body, h2 {
+    font-family: "Roboto", sans-serif;
+    color: var(--color-text);
+}
+
+h1, .section-title {
+    font-family: "Squada One", sans-serif;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 5rem); /* mínimo, adaptable, máximo */
+    color: var(--color-text);
+}
+
+.subtitle {
+    color: var(--color-text);
+}
+
+.section-text-title {
+    color: #1e1e1ed8;
+    font-family: "Squada One", sans-serif;
+    font-size: clamp(1.2rem, 3.7vw, 3.7rem); 
+}
+
+.text-color {
+    color: var(--color-primary);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-color:hover, .icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out
+}
+
+i {
+    font-size: clamp(1.2em, 3vw, 2em); 
+    color: var(--color-text-inverted);
+}
+
+i:hover {
+    color: var(--color-primary);
+}
+
+.text-pacifico {
+    font-size: 1.7rem;
+    font-family: "Pacifico", serif;
+    color: var(--color-accent);
+}
+
+/* sombra avatar y proyecto */
+.header-right img, .project-item {
+    filter: drop-shadow(6px 6px 4px var(--color-shadow));
+}
+
+
+/* -------------secciones------------------ */
+/*HEADER*/
+.header{
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--color-primary);
+}
+
+.title-1 h1 {
+    color: var(--color-text-inverted);
+    font-family: "Squada One", sans-serif;
+    font-size: clamp(2rem, 7vw, 6rem); /* mínimo, adaptable, máximo */
+    letter-spacing: 2px;
+}
+
+.header-icons i {
+    color: #22727c;
+}
+
+.header-icons i:hover {
+    color: white;
+}
+
+
+/*-----------------MAIN----------------*/
+/*proyectos*/
+.layout {
+    display: grid;
+    grid-template-columns:4fr 5fr;
+    gap: 1rem;
+}
+
+.col {
+    min-height: 100vh;
+}
+
+.layout-project {
+    background-color: var(--color-text-inverted);
+}
+
+.layout-about {
+    background-color: var(--color-bg-secondary);
+} 
+
+.project-item {
+    position: relative;
+}
+
+.img-project {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.img-project img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.img-project:hover img {
+    transform: perspective(1000px) rotateY(0deg) skewY(0deg);
+    border-radius: 10px;
+}
+
+.project-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-accent);
+    color: var(--color-text-inverted);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 1rem;
+    pointer-events: none; /* Desactiva eventos excepto en enlace */
+}
+
+.img-project:hover .project-info {
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.project-info a {
+    pointer-events: auto;
+    color: var(--color-text-inverted);
+    text-decoration: underline;
+    z-index: 2;
+    position: relative;
+}
+
+.project-info i {
+    font-size: 42px;
+    margin: 10px;
+}
+
+.btn-project {
+    background-color: var(--color-primary);
+    border-radius: 2em;
+    box-shadow: 6px 6px 4px var(--color-shadow);
+}
+
+.btn-project a {
+    text-decoration: none;
+    color: var(--color-text-inverted);
+}
+
+.btn-project:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-6px);
+    animation: none;
+}
+
+
+/* ------------------SOBRE MI--------------------- */
+
+.flip-card img {
+    border-radius: 10px;
+}
+
+.icon {
+    width: 66px;
+    max-height: 52px;
+}
+
+.icon-width {
+    width: 80px;
+    height: 45;
+}
+
+/*----------------contacto-----------------*/
+.contact{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.contact::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/keyboard.jpg');
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: 125%; 
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.contact h2{
+    font-size: clamp(2rem, 5vw, 5rem); 
+}
+
+.contact h3 {
+    font-family: "Squada One", sans-serif;
+    font-size: 2.5rem;
+}
+
+.contact img{
+    width: 42px;
+    transform: rotate(-0.05turn);
+}
+
+footer {
+    background-color: #1D242AE6;
+    position: relative;
+}
+
+/* ----------------Responsive-------------------*/
+@media (max-width: 768px) {
+    .text1, .header-left .header-icons {
+        text-align: center;
+    }
+
+    .header-icons {
+        display: block; 
+        margin: 0 auto; 
+        text-align: center;
+    }
+
+    .header-icons a {
+        margin: 10px 0; 
+        display: inline-block; 
+    }
+
+    .header h1 {
+        padding-top: 1rem;
+        text-align: center;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+    .col {
+        margin-bottom: 1rem;
+    }
+
+    .project-info {
+        padding: 15px 20px !important;
+    }
+
+    .project-info i {
+    font-size: 27px;
+    margin: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    /*-no fijo */
+    .layout {
+        display: block;
+    }
+
+    .col-left {
+        position: static;
+        top: auto;
+        height: auto;
+    }
+
+    .col {
+        min-height: auto;
+    }
+    /*termina no fijo*/
+
+    .col-freelance h3{
+    margin-top: 0;
+    }
+
+    .project-item img {
+        text-align: center;
+    }
+
+    .contact::before {
+    background-size: cover;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        padding-top: 2.5rem;
+    }
+}
