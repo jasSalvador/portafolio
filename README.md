@@ -17,25 +17,30 @@ Este portafolio es una landing page sencilla donde muestro algunos proyectos ini
     - Ofrece servicio de prestación de servicios
     - El proyecto se encuentra alojado en [Wirenet Chile] -> [https://muservicios.cl/]
 
+- **GestorApp**
+    - Desarrollada con Python - Django - MySQL
+    - El proyecto permite a cualquier organización gestionar usuarios e ingresos y egresos de dinero 
+    - El demo se encuentra en [YouTube] -> [Repositorio](https://github.com/jasSalvador/gestorApp) | [Demo](https://youtu.be/hqRqY9spNdw)
+
 - **Games opinion**
     - Desarrollada en Bootcamp Vue.js
     - Permite opinar y dar like a diversos videojuegos consumidos desde una API externa
-    - El proyecto se encuentra alojado en [Netlify] -> [Repositorio](https://github.com/jasSalvador/games_opinion) | [Demo](https://gameopinion.netlify.app/)
+    - El proyecto se encuentra alojado en [Netlify] -> [Repositorio](https://github.com/jasSalvador/games_opinion) | [Web](https://gameopinion.netlify.app/)
 
 - **Tienda OnLine**
     - Desarrollada en javaScript
     - Simula la compra de productos mediante un carrito dinámico
-    - el royecto se encuentra alojado en [GitHub page] -> [Repositorio](https://github.com/jasSalvador/carrito_de_compras_m4) [Demo](https://jassalvador.github.io/carrito_de_compras_m4/)
+    - el royecto se encuentra alojado en [GitHub page] -> [Repositorio](https://github.com/jasSalvador/carrito_de_compras_m4) [Web](https://jassalvador.github.io/carrito_de_compras_m4/)
 
 - **Trivias infantiles**
     - Juego interactivo de preguntas para niños.
     - El proyecto se encuentra alojado en GitHub page.
-    [Repositorio](https://github.com/jasSalvador/triviKids) | [Demo](https://jassalvador.github.io/triviKids/)
+    [Repositorio](https://github.com/jasSalvador/triviKids) | [Web](https://jassalvador.github.io/triviKids/)
 
 - **Digimon API**
     - Aplicación que consume API pública de Digimon para mostrar personajes dinámicamente.
     - El proyecto se encuentra alojado en GitHub page.
-    [Repositorio](https://github.com/jasSalvador/digimon-api) | [Demo](https://jassalvador.github.io/digimon-api/)
+    [Repositorio](https://github.com/jasSalvador/digimon-api) | [Web](https://jassalvador.github.io/digimon-api/)
 
 ## Tecnologías utilizadas 🚀
 - HTML
@@ -45,7 +50,7 @@ Este portafolio es una landing page sencilla donde muestro algunos proyectos ini
 
 ## Despliegue 🌍
 Publicado en **GitHub Pages** y **Vercel**
-[Mi portafolio](https://jassalvador.github.io/portafolio/) | [Vercel](https://jasminsalvador.vercel.app/)
+[Mi portafolio] -> [Github page](https://jassalvador.github.io/portafolio/) | [Vercel](https://jasminsalvador.vercel.app/)
 
 ## Enlace al Demo en YouTube 🎯
 [Demo](https://youtu.be/43AD0ClkD4k)
