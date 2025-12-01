@@ -59,27 +59,86 @@ i {
 }
 
 i:hover {
-    color: var(--color-primary);
+    color: var(--color-accent);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
 .text-pacifico {
     font-size: 1.7rem;
     font-family: "Pacifico", serif;
     color: var(--color-accent);
+    transform: rotate(-0.01turn);
 }
-
 /* sombra avatar y proyecto */
 .header-right img, .project-item {
     filter: drop-shadow(6px 6px 4px var(--color-shadow));
 }
 
+/* -----------------animaciones------------- */
+/* textos */
+.fade-up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.4s ease-out, transform 0.9s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* imagenes */
+.fade-scale {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.5s ease-out, transform 0.9s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
 
 /* -------------secciones------------------ */
 /*HEADER*/
 .header{
     position: relative;
     min-height: 100vh;
-    background-color: var(--color-primary);
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--color-primary) 57%, var(--color-bg-secondary) 43%);
+    z-index: -1; 
+} 
+
+.glow-border {
+    height: 12px;
+    width: 100%;
+    background: linear-gradient(-45deg, #dfdede 40%, #fafafa 50%, #eee 60%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
+}
+
+@keyframes shimmer {
+    to {
+        background-position-x: 0%
+    }
+}
+
+.header-right {
+    max-width: 100%;
+}
+
+.header-left {
+    color: var(--color-text-inverted);
 }
 
 .title-1 h1 {
@@ -87,16 +146,25 @@ i:hover {
     font-family: "Squada One", sans-serif;
     font-size: clamp(2rem, 7vw, 6rem); /* mínimo, adaptable, máximo */
     letter-spacing: 2px;
+    text-shadow: 0 0 5px var(--color-accent), 0 0 15px var(--color-accent), 0 0 30px var(--color-accent);
 }
 
-.header-icons i {
-    color: #22727c;
+.header-right img {
+    animation: move 3s linear infinite;
 }
 
-.header-icons i:hover {
-    color: white;
+/* avatar*/
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
-
 
 /*-----------------MAIN----------------*/
 /*proyectos*/
@@ -108,6 +176,12 @@ i:hover {
 
 .col {
     min-height: 100vh;
+}
+
+.col-left {
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 
 .layout-project {
@@ -131,6 +205,10 @@ i:hover {
 .img-project img {
     width: 100%;
     height: 100%;
+    transform: perspective(1200px) rotateY(-25deg) rotateX(20deg) skewY(-7deg);
+    clip-path: path("M 0 0 Q 50% -20px, 100% 0 L 100% 100% Q 50% 120px, 0 100%");
+    transform-origin: top right;
+    transition: transform 0.4s ease;
     display: block;
 }
 
@@ -189,11 +267,96 @@ i:hover {
     animation: none;
 }
 
+/*--------------carrusel----------------*/
+.carousel {
+    width: 100%;
+    height: 14vh;
+    background: var(--color-bg-secondary);
+    background: linear-gradient(0deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    text-shadow: 0 0 5px #434444, 0 0 15px #555555, 0 0 30px #4e4e4e;
+}
+
+.carousel-phrases {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto; 
+}
+
+.carousel-text {
+    min-width: 640px;
+    max-width: 400px;
+    height: 100px;
+    display: inline-block;
+}
+
+.carousel-text p {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: var(--color-texto);
+}
 
 /* ------------------SOBRE MI--------------------- */
+.flip-container {
+    perspective: 1000px;
+    width: 360px;
+    height: 390px;
+    margin: 0 auto;
+}
+
+.flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 10px;
+}
 
 .flip-card img {
     border-radius: 10px;
+}
+
+.flip-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-perfil, .flip-reverse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px var(--color-shadow);
+}
+
+.flip-reverse {
+    transform: rotateY(180deg);
+    background-color: var(--color-primary);
+    color: var(--color-texto-invertido);
+}
+
+details i {
+    color: var(--color-primary);
+}
+
+#candyLevel {
+    color: var(--color-text);
+}
+
+#candyLevel:hover {
+    color: var(--color-accent);
+}
+
+hr {
+    display: block;
+    width: 7vw;
+    height: 4px;
+    background-color: var(--color-accent);
+    border: none;
+    opacity: 1;
 }
 
 .icon {
@@ -204,6 +367,14 @@ i:hover {
 .icon-width {
     width: 80px;
     height: 45;
+}
+
+details h4, summary {
+    color: var(--color-primary);
+}
+
+summary:focus {
+    border: none;
 }
 
 /*----------------contacto-----------------*/
@@ -225,6 +396,7 @@ i:hover {
     background-size: 125%; 
     filter: blur(5px);
     z-index: -1;
+    animation: movemBg 20s linear infinite;
 }
 
 .contact h2{
@@ -239,6 +411,21 @@ i:hover {
 .contact img{
     width: 42px;
     transform: rotate(-0.05turn);
+}
+
+@keyframes movemBg {
+    0%{
+		background-position: bottom left;
+    }   
+    30%{		
+		background-position: top right;
+    }
+    60%{
+        background-position: top left;
+    }
+    100%{
+        background-position: bottom right;
+    }
 }
 
 footer {
@@ -266,6 +453,10 @@ footer {
     .header h1 {
         padding-top: 1rem;
         text-align: center;
+    }
+
+    .wrapper {
+        background: linear-gradient(to bottom, var(--color-primary) 70%, var(--color-bg-secondary) 30%);
     }
 
     .layout {

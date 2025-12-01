@@ -6,7 +6,27 @@ Hola, soy Jasmin 👋
 Desarrolladora web en formación, apasionada por crear soluciones interactivas que combinen código y diseño.
 Este portafolio es una landing page sencilla donde muestro algunos proyectos iniciales y las tecnologías que utilizo.
 
-## Proyectos destacados 💻
+## Proyectos incluídos 💻
+- **Landing page DJ**
+    - Desarrollada con HTML - CSS - JavaScript - Bootstrap - PHP para manejo de formulario
+    - Ofrece servicio de arriendo de equipos audiovisuales y animación de eventos
+    - El proyecto se encuentra alojado en [Wirenet Chile] -> [https://rqsproducciones.cl/]
+
+- **Landing page MuServicios**
+    - Desarrollada en Wordpress
+    - Ofrece servicio de prestación de servicios
+    - El proyecto se encuentra alojado en [Wirenet Chile] -> [https://muservicios.cl/]
+
+- **Games opinion**
+    - Desarrollada en Bootcamp Vue.js
+    - Permite opinar y dar like a diversos videojuegos consumidos desde una API externa
+    - El proyecto se encuentra alojado en [Netlify] -> [Repositorio](https://github.com/jasSalvador/games_opinion) | [Demo](https://gameopinion.netlify.app/)
+
+- **Tienda OnLine**
+    - Desarrollada en javaScript
+    - Simula la compra de productos mediante un carrito dinámico
+    - el royecto se encuentra alojado en [GitHub page] -> [Repositorio](https://github.com/jasSalvador/carrito_de_compras_m4) [Demo](https://jassalvador.github.io/carrito_de_compras_m4/)
+
 - **Trivias infantiles**
     - Juego interactivo de preguntas para niños.
     - El proyecto se encuentra alojado en GitHub page.
@@ -21,10 +41,17 @@ Este portafolio es una landing page sencilla donde muestro algunos proyectos ini
 - HTML
 - CSS
 - Bootstrap
+- JavaScript
 
 ## Despliegue 🌍
-Publicado en **GitHub Pages** 
-[Mi portafolio](https://jassalvador.github.io/portafolio/)
+Publicado en **GitHub Pages** y **Vercel**
+[Mi portafolio](https://jassalvador.github.io/portafolio/) | [Vercel](https://jasminsalvador.vercel.app/)
+
+## Enlace al Demo en YouTube 🎯
+[Demo](https://youtu.be/43AD0ClkD4k)
+
+## Conclusiones 📍
+Este portafolio refleja mi aprendizaje, mis habilidades en desarrollo web y mi pasión por el diseño.
 
 ## Licencia 📃
 Este proyecto está bajo la licencia MIT.
@@ -33,3 +60,6 @@ Este proyecto está bajo la licencia MIT.
 1. Clonar el repositorio
 2. Abrir el archivo `index.html` en tu navegador
 3. Listo!
+
+## Autora 👩🏻‍💻
+Jasmin S | Fan del código bonito ✨

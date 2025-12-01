@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!--iconos bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--jquery-->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--favicon-->
     <link rel="icon" type="image/x-icon" href="./assets/img/logo.png">
     <script defer src="./assets/js/script.js"></script>
@@ -28,20 +32,20 @@
 </head>
 <body>
     <!--header-->
-    <header class="header section d-flex justify-content-center align-items-center mx-auto">
+<header class="header section d-flex justify-content-center align-items-center mx-auto">
         <div class="wrapper"></div>
         <div class="container">
             <div class="cont-header container d-flex flex-wrap justify-content-center align-items-center">
                 <!---left-->
                 <div class="header-left col-lg-6 col-md-6 col-sm-12 text-left">
                     <div class="header-text ps-4">
-                        <h2 id="machine" class="text-pacifico">Hola, soy Jasmin 👋</span></h2>
+                        <h2 id="machine" class="text-pacifico"></h2>
                     </div>
-                    <div class="title-1 my-3">
+                    <div class="animate__animated animate__fadeInLeft title-1 my-3">
                         <h1 class="fw-bold">&lt; Explorando el Código y el Diseño /&gt;</h1>
                     </div>
 
-                    <div class="header-icons">
+                    <div class="header-icons animate__animated animate__fadeInLeft animate__delay-1s">
                         <a href="#projects"><i class="bi bi-laptop-fill pe-3" title="Proyectos"></i></a>
                         <a href="#aboutMe"><i class="bi bi-person-circle pe-3" title="Sobre mi"></i></a>
                         <a href="mailto:sjasmin.salvador@gmail.com"><i class="bi bi-envelope-check-fill pe-3" title="Contacto"></i></a>
@@ -49,7 +53,6 @@
                         <a href="https://www.linkedin.com/in/sjasalvador/" target="_blank"><i class="bi bi-linkedin" title="Linkedin"></i></a>
                     </div>
                 </div>
-
                 <!--right-->
                 <div class="header-right col-lg-6 col-md-6 col-sm-8 fade-scale">
                     <img src="./assets/img/avatar.png" class="d-block w-100 mx-auto" title="Creado con IA"
@@ -59,8 +62,10 @@
         </div>
     </header>
 
-<!-- ==========================================proyectos============================================================ -->
+    <div class="glow-border"></div>
+    <div class="glow-border mt-1"></div>
 
+<!-- ==========================================proyectos============================================================ -->
     <main>
         <!--proyectos-->
         <section class="layout-project pb-5" id="projects">
@@ -71,13 +76,19 @@
                         <div class="text-lg-start text-center me-auto">
                             <div class="mt-2">
                                 <h2 class="fw-bold section-title text-nowrap fade-up animate-delay-3">&lt; Mi lado Dev /&gt;</h2>
-                                <!--descripción-->
-                                <h5 class="mt-4 fade-up delay-5">Desde conceptos básicos hasta soluciones reales. Cada proyecto ha 
-                                    representado un desafío único que me permitió aprender y crecer como desarrolladora.</h5>
+                                <h4 class="section-text-title fade-up animate-delay-5">
+                                    Una mezcla entre lo <span class="text-color">estético</span> y lo <span
+                                        class="text-color">funcional</span>, la creatividad y la lógica.
+                                </h4>
+                                <hr class="text-center mx-auto w-75 fade-up delay-5">
+
+                            <!--descripción-->
+                            <h5 class="mt-4 fade-up delay-5">Desde conceptos básicos hasta soluciones reales. Cada proyecto ha 
+                                representado un desafío único que me permitió aprender y crecer como desarrolladora.</h5>
                             </div>
         
                             <!--enlace github-->
-                            <div class="btn-project p-1 mb-3 mt-4 fade-up d-inline-block">
+                            <div class="btn-project p-1 mb-3 mt-4 fade-up animate-delay-6 d-inline-block">
                                 <a href="https://github.com/jasSalvador" target="_blank" class="text-center mx-auto">
                                     <div class="px-3 py-2 d-flex justify-content-center align-items-center gap-2">
                                         <p class="mb-0 fw-bold">Ver todos mis proyectos</p>
@@ -88,13 +99,114 @@
                         </div>
                     </div>
         
-                    <!--derecha-->
+                    <!--scroll-->
                     <div class="col col-freelance pt-5">
                         <div class="portfolio-section ps-2">
+                            <!--proyectos freelance-->
+                            <div class="row gx-4 gy-4 pt-5 text-end ms-auto">
+                                <h3 class="fw-bold mb-1 subtitle fade-up">Desarrollo Freelance</h3>
+                                <!-- rqs -->
+                                <div class="project-item fade-scale">
+                                    <div class="img-project img-project-1">
+                                        <img src="./assets/img/rqs.png" alt="Landing Page para DJ. Arriendo de equipos audiovisuales y producción de eventos." class="w-100 img-fluid">
+                                        <div class="project-info p-5 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="fs-4 fw-bold">RQSproducciones 🎧</p>
+                                            <p class="mb-0 d-none d-md-block">Landing Page realizada para un DJ. 
+                                                Ofrece un servicio completo de arriendo de equipos audiovisuales. 
+                                                Además, cuenta con opciones de producción integral, incluyendo colaboración
+                                                con banqueteros para garantizar una experiencia completa con música, ambientación y servicio.
+                                            </p>
+                                            <p>Desarrollada con HTML - CSS - Bootstrap - JavaScript y PHP para manejo de
+                                                formulario.</p>
+                                            <div class="mt-0">
+                                                <a href="https://rqsproducciones.cl/" target="_blank" rel="noopener noreferrer">
+                                                    <i class="bi bi-laptop"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!--muServ-->
+                                <div class="project-item fade-scale">
+                                    <div class="img-project">
+                                        <img src="./assets/img/muserv.png" alt="Landing page de servicios varios." class="w-100 img-fluid">
+                                        <div
+                                            class="project-info p-5 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="fs-4 fw-bold">Me Urge servicios 👷‍♂️</p>
+                                            <p class="mb-0 d-none d-md-block">Landing Page para conectar clientes con variados servicios.
+                                                Esta plataforma ofrece una solución integral para la prestación de multiples servicios,
+                                                adaptandose a las necesidades de particulares, comercios y empresas. Además de 
+                                                invitar a nuevos profesionales y negocios a su red de colaboración, ampliando
+                                                oportunidades y simplificando la busqueda de soluciones para sus clientes.
+                                            </p>
+                                            <p>Creada con Wordpress y Elemetor.</p>
+                                            <div class="">
+                                                <a href="https://muservicios.cl/" target="_blank" rel="noopener noreferrer">
+                                                    <i class="bi bi-laptop"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
                             <!--FORMACION-->
-                            <div class="row gx-4 gy-4 text-end ms-auto">
+                            <div class="row gx-4 gy-4 pt-5 text-end ms-auto">
                                 <h3 class="fw-bold mb-1 subtitle fade-up delay-2">Proyectos desarrollo web</h3>
-
+        
+                                <!-- games -->
+                                <div class="project-item fade-scale">
+                                    <div class="img-project">
+                                        <img src="./assets/img/games.png" alt="App web con API de videojuegos." class="w-100 img-fluid">
+                                        <div class="project-info p-5 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="fs-4 fw-bold">Games Opinión 🎮</p>
+                                            <p class="mb-0 d-none d-md-block">Proyecto desarrollado en Vue que consume una API de videojuegos y permite
+                                                a los usuarios opinar y dar "like", con almacenamiento en localStorage.
+                                                Además, optimiza la versión original realizada en el bootcamp, simplificando la 
+                                                funcionalidad y eliminando vistas innecesarias para mejorar la experiencia del usuario.
+                                            </p>
+                                            <p>Desarrollada con Vue.js - HTML - CSS - Bootstrap - JavaScript.</p>
+                                            <div class="">
+                                                <a href="https://github.com/jasSalvador/games_opinion" target="_blank"
+                                                    rel="noopener noreferrer">
+                                                    <i class="bi bi-github"></i>
+                                                </a>
+                                                <a href="https://gameopinion.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                                    <i class="bi bi-laptop"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- carrito -->
+                                <div class="project-item fade-scale">
+                                    <div class="img-project">
+                                        <img src="./assets/img/tienda.png" alt="APP web de carrito de compras dinámico." class="w-100 img-fluid">
+                                        <div
+                                            class="project-info p-5 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="fs-4 fw-bold">Tienda Online 🛒</p>
+                                            <p class="mb-0 d-none d-md-block">Aplicación web que simula la compra de productos mediante un
+                                                carrito dinámico. Permite agregar, visualizar y modificar productos en tiempo 
+                                                real, mostrando el total de la compra y simulando el pago. Implementa 
+                                                manipulación del DOM para gestionar la interfaz en una sola vista, ocultando 
+                                                y mostrando secciones.</p>
+                                            <p>Desarrollada con HTML - CSS - Bootstrap - JavaScript.</p>
+                                            <div class="">
+                                                <a href="https://github.com/jasSalvador/carrito_de_compras_m4" target="_blank"
+                                                    rel="noopener noreferrer">
+                                                    <i class="bi bi-github"></i>
+                                                </a>
+                                                <a href="https://jassalvador.github.io/carrito_de_compras_m4/" target="_blank"
+                                                    rel="noopener noreferrer">
+                                                    <i class="bi bi-laptop"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
                                 <!-- trivias -->
                                 <div class="project-item fade-scale">
                                     <div class="img-project">
@@ -156,26 +268,89 @@
             </div>
         </section>
 
+<!-- =======================================carrusel==================================================================== -->
+        <section class="text-center">
+            <div class="glow-border mb-0"></div>
+            <div class="carousel d-flex align-items-center my-auto">
+                <div class="carousel-phrases px-3">
+
+                    <div class="carousel-text d-flex align-items-center">
+                        <p>TODO COMIENZA CON UNA IDEA</p>
+                        <p class="mx-2">💡</p>
+                        <p>Y UN POCO DE CÓDIGO</p>
+                    </div>
+
+                    <div class="carousel-text d-flex align-items-center">
+                        <p>SI PUEDES IMAGINARLO </p>
+                        <p class="mx-2">⭐</p>
+                        <p>PUEDES PROGRAMARLO</p>
+                    </div>
+
+                    <div class="carousel-text d-flex align-items-center">
+                        <p>TODO COMIENZA CON UNA IDEA</p>
+                        <p class="mx-2">💡</p>
+                        <p>Y UN POCO DE CÓDIGO</p>
+                    </div>
+
+                    <div class="carousel-text d-flex align-items-center">
+                        <p>SI PUEDES IMAGINARLO</p>
+                        <p class="mx-2">⭐</p>
+                        <p>PUEDES PROGRAMARLO</p>
+                    </div>
+
+                    <div class="carousel-text d-flex align-items-center">
+                        <p>TODO COMIENZA CON UNA IDEA</p>
+                        <p class="mx-2">💡</p>
+                        <p>Y UN POCO DE CÓDIGO</p>
+                    </div>
+
+                    <div class="carousel-text d-flex align-items-center">
+                        <p>SI PUEDES IMAGINARLO</p>
+                        <p class="mx-2">⭐</p>
+                        <p>PUEDES PROGRAMARLO</p>
+                    </div>
+                </div> 
+            </div>   
+            <div class="glow-border"></div>
+        </section>
+
+
 <!-- =========================================sobre mi============================================================ -->
         <!-- sobre mi -->
         <section class="layout-about" id="aboutMe">
             <div class="container">
-                <div class="layout pb-5">
+                <div class="layout py-5">
                     <div class="col col-left pt-5 mt-3 me-auto">
-                        <div class="">
+                        <div class="flip-container fade-scale delay-4">
                             <div class="flip-card">
-                                <div class="d-flex justify-content-start align-items-center me-auto">
+                                <div class="flip-perfil d-flex justify-content-start align-items-center me-auto">
                                     <img src="./assets/img/perfil-B.jpeg" alt="Foto perfil" class="w-100 d-block">
+                                </div>
+                                <div class="flip-reverse text-center align-center p-5">
+                                    <p>
+                                        Soy curiosa y detallista, siempre me ha gustado crear cosas lindas y funcionales. Antes lo hacía a 
+                                        través de la moda, como técnico en Diseño de Vestuario, y hoy lo hago con código.🚀
+                                    </p>
+                                    <p>
+                                        De hecho siempre estoy aprendiendo cosas nuevas o haciendo cosas simples como leer o jugar Candy Crush 😅
+                                        <span class="text-nowrap fw-bold fst-italic" id="candyLevel">[ Ver dato random 📌👀 ]</span> 
+                                        lo que me ayuda a mantener la mente activa.✨👩🏻‍💻
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
         
-                    <!-- derecha -->
+                    <!-- scroll -->
                     <div class="col text-lg-end text-center ms-auto pt-5">
                         <h3 class="section-title pt-3 fade-up delay-3">
                             &lt; Detrás del Código /&lt;
                         </h3>
+                        <h4 class="section-text-title fade-up delay-4">
+                            Diseño, desarrollo, aprendo y disfruto del 
+                            <span class="text-color">caos creativo</span> en cada línea de código.
+                        </h4>
+
                         <hr class="text-center mx-auto w-75 fade-up delay-5">
 
                         <!-- iconos tecnologias -->
@@ -204,23 +379,134 @@
                             <!--tecnologias bootcamp -->
                             <h5 class="text-muted fade-up delay-6">Técnologías exploradas en Bootcamps</h5>
                             <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 pb-5 mx-auto fade-up delay-7">
+                                
                                 <!-- Python -->
                                 <img src="assets/svg/python.svg" class="icon" title="Python" alt="icono python">
+
                                 <!-- django -->
                                 <img src="assets/svg/django.svg" class="icon icon-width" title="Django" alt="icono django">
+
                                 <!-- flask -->
                                 <img src="assets/svg/flask.svg" class="icon icon-width" title="Flask" alt="icono flask">
+
                                 <!-- mySql -->
                                 <img src="assets/svg/mysql.svg" class="icon icon-width" title="MySQL" alt="icono mySql">
+                                
                                 <!-- git -->
                                 <img src="assets/svg/git.svg" class="icon" title="Git" alt="icono git">
                             </div>
+
+                            <!--otras herramientas-->
+                            <h5 class="text-muted fade-up delay-8">Herramientas complementarias</h5>
+                            <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 pb-5 mx-auto fade-up delay-9">
+                                <!-- github -->
+                                <img src="assets/svg/github.svg" class="icon" title="Github" alt="icono github">
+
+                                <!-- postman -->
+                                <img src="assets/svg/postman.svg" class="icon" title="Postman" alt="icono postman">
+
+                                <!-- Wordpress -->
+                                <img src="assets/svg/wordpress.svg" class="icon" title="Wordpress" alt="icono wordpress">
+
+                                <!-- figma -->
+                                <img src="assets/svg/figma.svg" class="icon" title="Figma" alt="icono figma">
+
+                                <!-- illustrator -->
+                                <img src="assets/svg/illustrator.svg" class="icon" title="Illustrtor" alt="icono illustrator">
+
+                                <!-- canva -->
+                                <img src="assets/svg/canva.svg" class="icon" title="Canva" alt="icono canva">
+                            </div>
                         </div>
+
+                        <hr class="text-center mx-auto w-75 fade-up delay-9">
+
+                        <!--otros cursos-->
+                        <details class="row align-items-start pt-5 mx-auto">
+                            <summary class="text-center mx-auto mb-5 fw-bold text-title fs-5 fade-up delay-9">Ver más</summary>
+                        
+                            <!-- Bootcamp Python & Django (En curso) -->
+                            <div class="d-flex justify-content-between align-items-start mx-auto mb-3">
+                                <div class="col-4 p-3 d-flex align-items-center fade-up delay-1">
+                                    <p class="text-start text-black fw-bold me-2 mb-0">Mayo 2025 - En curso
+                                        <i class="bi bi-pin-angle-fill"></i>
+                                    </p>
+                                    <hr class="flex-grow-1 bg-black">
+                                </div>
+                                <div class="col-6 boot-item p-3 fade-up delay-1">
+                                    <h3 class="text-start fs-3">Bootcamp Python & Django</h3>
+                                    <p class="text-start">
+                                        Desarrollo de aplicaciones web con Python y Django y gestión de bases de datos SQL.
+                                    </p>
+                                </div>
+                            </div>
+                            <!--vue js-->
+                            <div class="d-flex justify-content-between align-items-start me-auto mb-3 fade-up delay-2">
+                                <div class="col-4 p-3 d-flex align-items-center">
+                                    <p class="text-start text-black fw-bold me-2 mb-0">Julio 2024 - Enero 2025</p>
+                                    <hr class="flex-grow-1 bg-black">
+                                </div>
+                                <div class="col-6 boot-item p-3 fade-up delay-2">
+                                    <h3 class="text-start fs-3">Bootcamp Vue.js</h3>
+                                    <p class="text-start">
+                                        Desarrollo de interfaces interactivas con Vue.js, manejo de estado global con Vuex y
+                                        rutas
+                                        con Vue Router.
+                                    </p>
+                                </div>
+                            </div>
+                        
+                            <!--diseño web-->
+                            <div class="d-flex justify-content-between align-items-start me-auto fade-up delay-4">
+                                <div class="col-4 p-3 d-flex align-items-center">
+                                    <p class="text-end text-black fw-bold me-2 mb-0">Agosto 2021 - Marzo 2022</p>
+                                    <hr class="flex-grow-1 bg-black">
+                                </div>
+                                <div class="col-6 boot-item p-3 fade-up delay-4">
+                                    <h3 class="text-start fs-3">Diseño y Desarrollo Web</h3>
+                                    <p class="text-start">
+                                        Fundamentos de diseño con HTML y CSS. Introducción a JavaScript y gestión de proyectos
+                                        Web.
+                                    </p>
+                                </div>
+                            </div>
+                                                
+                            <!-- Otros cursos -->
+                            <div class="py-5">
+                                <div class="container text-center">
+                                    <h4 class="mb-4 fade-up delay-5">Otros Cursos</h4>
+                                    <div class="row fade-up delay-6">
+                                        <div class="col-6 col-md-3 mb-3 exp-col">
+                                            <p class="fw-bold">Python & Flask</p>
+                                            <hr class="w-50 text-center mx-auto">
+                                            <p class="small">Fundamentos web y backend con Python, Flask. 160hrs.</p>
+                                        </div>
+                                        <div class="col-6 col-md-3 mb-3 exp-col">
+                                            <p class="fw-bold">UX/UI</p>
+                                            <hr class="w-50 text-center mx-auto">
+                                            <p class="small">Conceptos básicos, marcos de trabajo y prototipado inicial.</p>
+                                        </div>
+                                        <div class="col-6 col-md-3 mb-3 exp-col">
+                                            <p class="fw-bold">IA</p>
+                                            <hr class="w-50 text-center mx-auto">
+                                            <p class="small">Aplicaciones prácticas y nociones básicas de IA.</p>
+                                        </div>
+                                        <div class="col-6 col-md-3 mb-3 exp-col">
+                                            <p class="fw-bold">Scrum</p>
+                                            <hr class="w-50 text-center mx-auto">
+                                            <p class="small">Fundamentos de Scrum y metodologías ágiles.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+<!-- =======================================contacto==================================================================== -->
 
     <!--contacto-->
     <section class="contact">
